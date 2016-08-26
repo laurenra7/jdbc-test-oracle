@@ -1,5 +1,5 @@
 # jdbcTestOracle
-Test JDBC connection using Oracle JDBC driver.
+Test JDBC connection using Oracle JDBC driver.  The driver is included in the .jar file that is built.
 
 See pom.xml for what driver version is used. Currently **ojdbc6** version **11.2.0.3.0.**
 

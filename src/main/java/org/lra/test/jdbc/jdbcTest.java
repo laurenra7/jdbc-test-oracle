@@ -94,12 +94,12 @@ public class jdbcTest {
     }
 
     private static void showCommandHelp(Options options) {
-        String commandHelpHeader = "\nTest JDBC connections\n\n";
+        String commandHelpHeader = "\nTest JDBC connection with Oracle driver\n\n";
         String commandHelpFooter = "\nExample:\n\n" +
                 "  java -jar jdbcTestOracle.jar -u jdbc:oracle:thin:@ldap://my.server.com:456/dbname,cn=MyContext,dc=organization,dc=domain\n\n";
 
         HelpFormatter helpFormatter = new HelpFormatter();
-        helpFormatter.printHelp("java -jar jdbcTest.jar", commandHelpHeader, options, commandHelpFooter, true);
+        helpFormatter.printHelp("java -jar jdbcTestOracle.jar", commandHelpHeader, options, commandHelpFooter, true);
     }
 
     private static boolean testJDBCConnection(String dbUrl, String dbUser, String dbPassword) {
