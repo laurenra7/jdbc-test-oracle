@@ -1,7 +1,7 @@
 # jdbcTest
 Test JDBC connection using Oracle JDBC driver.
 
-See pom.xml for what driver version is used. Currently OJDBC6 version 11.2.0.3.0.
+See pom.xml for what driver version is used. Currently ojdbc6 version 11.2.0.3.0.
 
 **Build it:** 
 
@@ -33,5 +33,3 @@ Example:
   java -jar jdbcTestOracle.jar -u jdbc:oracle:thin:@ldap://my.server.com:456/dbname,cn=MyContext,dc=organization,dc=domain
 ```
 
-## Notes
-Includes MySQL code, but not used yet.  Will probably break this up into separate modules.

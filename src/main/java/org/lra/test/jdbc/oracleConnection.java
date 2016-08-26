@@ -1,4 +1,4 @@
-package org.lra.test.jdbc.oracle;
+package org.lra.test.jdbc;
 
 import java.math.BigDecimal;
 import java.sql.Connection;
@@ -6,8 +6,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import org.lra.test.jdbc.DBConnection;
 
 /**
  * Created by laurenra on 8/23/16.
@@ -41,7 +39,6 @@ public class oracleConnection implements DBConnection {
         }
 
         System.out.println("Oracle JDBC driver registered.");
-
 
         // Set up connection pool to database and get connection
         // using BoneCP 0.8 because it's fast (http://www.jolbox.com/)

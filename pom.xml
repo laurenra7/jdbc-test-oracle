@@ -16,11 +16,6 @@
     </properties>
 
     <dependencies>
-        <!--<dependency>-->
-            <!--<groupId>mysql</groupId>-->
-            <!--<artifactId>mysql-connector-java</artifactId>-->
-            <!--<version>5.1.31</version>-->
-        <!--</dependency>-->
 
         <!-- JDBC Driver (Oracle) -->
         <dependency>
@@ -42,28 +37,6 @@
             <artifactId>commons-cli</artifactId>
             <version>${apache.cli.version}</version>
         </dependency>
-
-        <!-- Logging -->
-        <!--<dependency>-->
-            <!--<groupId>log4j</groupId>-->
-            <!--<artifactId>log4j</artifactId>-->
-            <!--<version>${log4j.version}</version>-->
-            <!--<scope>compile</scope>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>org.slf4j</groupId>-->
-            <!--<artifactId>slf4j-log4j12</artifactId>-->
-            <!--<version>${slf4j.version}</version>-->
-            <!--<scope>compile</scope>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>org.slf4j</groupId>-->
-            <!--<artifactId>jcl-over-slf4j</artifactId>-->
-            <!--<version>${slf4j.version}</version>-->
-            <!--<scope>compile</scope>-->
-        <!--</dependency>-->
 
     </dependencies>
 
