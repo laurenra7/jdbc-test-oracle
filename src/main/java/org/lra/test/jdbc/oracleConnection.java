@@ -12,6 +12,7 @@ import java.sql.Statement;
  */
 public class oracleConnection implements DBConnection {
 
+    private String testSqlStatement = "select sysdate from dual";
     private Connection connection = null;
     private long startTimeNano;
 
@@ -33,7 +34,8 @@ public class oracleConnection implements DBConnection {
         // Load the JDBC driver
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-        } catch (ClassNotFoundException e) {
+        }
+        catch (ClassNotFoundException e) {
             System.out.println("ERROR: can't find driver " + e.getMessage());
             return false;
         }
@@ -57,7 +59,8 @@ public class oracleConnection implements DBConnection {
 //            connectionPool = new BoneCP(config);
 //            connection = connectionPool.getConnection();
             System.out.println("getConnection - elapsed seconds: " + getElapsedSeconds(startTimeNano));
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.println("getConnection FAIL - elapsed seconds: " + getElapsedSeconds(startTimeNano));
             System.out.println("Connection failed. Check output console.");
             e.printStackTrace();
@@ -80,12 +83,14 @@ public class oracleConnection implements DBConnection {
         try {
             Statement statement = connection.createStatement();
             startTimeNano = System.nanoTime();
-            ResultSet resultSet = statement.executeQuery("select sysdate from dual");
+            ResultSet resultSet = statement.executeQuery(testSqlStatement);
             System.out.println("executeQuery - elapsed seconds: " + getElapsedSeconds(startTimeNano));
+            System.out.println("Test SQL statement: " + testSqlStatement);
             while(resultSet.next()) {
-                System.out.println("sysdate: " + resultSet.getString("sysdate"));
+                System.out.println("Test SQL result: " + resultSet.getString("sysdate"));
             }
-        } catch (SQLException e) {
+        }
+        catch (SQLException e) {
             System.out.println("executeQuery FAIL - elapsed seconds: " + getElapsedSeconds(startTimeNano));
             System.out.println("ERROR: did not execute SQL statement.");
             System.out.println(e.getMessage());

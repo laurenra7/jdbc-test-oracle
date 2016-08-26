@@ -1,7 +1,7 @@
 # jdbcTestOracle
 Test JDBC connection using Oracle JDBC driver.  The driver is included in the .jar file that is built.
 
-See pom.xml for what driver version is used. Currently **ojdbc6** version **11.2.0.3.0.**
+See pom.xml for what driver version is used. Using **ojdbc6** version **11.2.0.3.0** currently.
 
 **Build it:** 
 
@@ -22,7 +22,7 @@ You can include the username and connection URL on the command line. If you don'
 ```
 usage: java -jar jdbcTest.jar [-h] [-n <userName>] [-u <URL>]
 
-Test JDBC connections
+Test JDBC connection with Oracle driver
 
   -h,--help                  Show this help
   -n,--username <userName>   Database user name
@@ -30,6 +30,6 @@ Test JDBC connections
 
 Example:
 
-  java -jar jdbcTestOracle.jar -u jdbc:oracle:thin:@ldap://my.server.com:456/dbname,cn=MyContext,dc=organization,dc=domain
+  java -jar jdbcTestOracle.jar -u jdbc:oracle:thin:@ldap://hostname:port/dbname,cn=MyContext,dc=organization,dc=domain
 ```
 
