@@ -1,7 +1,7 @@
-# jdbcTest
+# jdbcTestOracle
 Test JDBC connection using Oracle JDBC driver.
 
-See pom.xml for what driver version is used. Currently ojdbc6 version 11.2.0.3.0.
+See pom.xml for what driver version is used. Currently **ojdbc6** version **11.2.0.3.0.**
 
 **Build it:** 
 
